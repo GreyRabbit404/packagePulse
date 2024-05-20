@@ -1,0 +1,47 @@
+*{
+    background-color: rgb(252, 247, 250);
+}
+.main_cont{
+    display: inline-block;
+    margin-left:10vw ;
+    width:max-content;
+    
+}
+.outer{
+    height:100vh;
+    width:100vw;
+    display:flex;
+}
+.heading{
+    margin:0 20%;
+    display: inline-block;
+    width:max-content;
+    color:rgb(143, 1, 1)
+}
+.form{
+    margin:0 20%;
+    display: inline-block;
+    width:max-content;
+    
+}
+.set_input_size{
+    width:20vw;
+}
+.predict_button{
+    height:30px;
+    width:20.5vw;
+    background-color:#ad0017;
+    color:white;
+    font-weight: 600;
+}
+button:hover {
+    
+    background-color: rgb(211, 4, 42);
+    transition: 0.2s;
+    scale:1.02;
+}
+.image{
+    margin-top:15vw;
+}
+
+

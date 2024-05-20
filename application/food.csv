@@ -1,0 +1,24 @@
+sno,type,name,per_quantity(g),palmoil,addedsugar,food_color,fat,sodium,protein,healthy
+1,namkeen,aloo bhujia,100,yes,0,0,42.6,0.78,8.8,0
+2,namkeen,bhjia,100,yes,0.25,0,38.52,0.65,8.8,0
+3,namkeen,khatta meetha,100,yes,4.26,0,29.25,0.0368,9.26,0
+4,namkeen,fatafat bhel,100,yes,12,0,30,0.55,11,0
+5,namkeen,moong daal,100,yes,1.7,0,17.5,0.54,21.2,0
+6,namkeen,navratnna,100,yes,0,0,34.5,0.65,19.2,0
+7,namkeen,neelam makane,100,no,0.2,0,16.51,0.02,8.71,1
+8,namkeen,indiana roasted chana,500,no,0.2,0,15.61,0.03,8.71,1
+9,namkeen,salted nuts,200,no,0.2,0,12,0.02,10.21,1
+10,namkeen,nuts,200,yes,0.4,1,16,0.45,10.9,0
+11,namkeen,cashews,200,no,0,0,26,0.02,30,1
+12,namkeen,delights,100,no,0.2,0,12,0.03,24,1
+13,namkeen,gathia,100,no,0,0,14,0.01,19,1
+14,namkeen,jorgaram,100,no,0.3,0,9,0.02,20,1
+15,namkeen,papad,100,no,0,0,13,0.02,14,1
+16,biscuits,oreo,100,yes,38.6,1,19.5,0.49,5.3,0
+17,biscuits,bourboun,100,yes,37,1,20,0.03,5,0
+18,biscuits,milano,100,yes,30,0,32,0.03,5,0
+19,biscuits,pargleg,100,yes,28,0,31,0.06,5.6,0
+20,biscuits,tiger,100,yes,26,0,28,0.32,6,0
+21,biscuits,marie,100,yes,26,0,26,0.02,7,0
+22,biscuits,jowarcoconutmillets,100,no,10,0,17,0.01,12.45,1
+23,biscuits,7supergrainsdigestive,100,no,11,0,19,0,15,1

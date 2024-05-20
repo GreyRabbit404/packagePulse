@@ -1,13 +1,35 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,jsonify
 import pickle
 import numpy as np
+import pandas as pd
 
-model = pickle.load(open('model.pkl','rb'))
+model = pickle.load(open('application/model.pkl','rb'))
+
+Rmodel = pickle.load(open('application/cosine_sim.pkl','rb'))
+filter = pd.read_csv('application/food.csv')
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+# Define a route for receiving food_name and returning recommendations
+@app.route('/recommendations', methods=['POST'])
+# Load the recommendation function
+def get_recommendations( cosine_sim=Rmodel, df=filter):
+    food_name = request.form.get('Name')
+
+    idx = df[df['name'] == food_name].index[0]
+    sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    sim_scores = sim_scores[1:11]  # Exclude the first item (itself)
+
+    food_indices = [i[0] for i in sim_scores]
+    res = df['name'].iloc[food_indices].values.tolist()
+
+    print(res)
+    return render_template('index.html',res = res)
 
 
 @app.route('/predict',methods = ['POST'])

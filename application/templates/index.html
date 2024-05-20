@@ -3,46 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title> Package Pulse</title>
+    <link rel="stylesheet" href="application\templates\index.css">
+</head>
 </head>
 <body>
+    <div class="outer">
+        <div class="main_cont">
+            <div class="heading">
+                <h1 class="set_input_size">Package Pulse</h1>
+            </div>
 
-    <h1>Package Pulse</h1>
-    {% if result %}
-        <p>{{ result }}</p>
-    {% endif %}
-    <form method="post" action="/predict">
-        <label>Sno</label><br>
-        <input type="text" name="Sno"><br><br>
-        
-        <label>Type</label><br>
-        <input type="text" name="Type"><br><br>
+            <div class="form">
+            
+                <form method="post" action="/recommendations">
+                    <!-- <label>Sno</label><br>
+                    <input class="set_input_size" type="text" name="Sno"><br><br>
+                    
+                    <label>Type</label><br>
+                    <input class="set_input_size" type="text" name="Type"><br><br> -->
 
-        <label>Name</label><br>
-        <input type="text" name="Name"><br><br>
+                    <label>Name</label><br>
+                    <input class="set_input_size" type="text" name="Name"><br><br>
 
-        <label>PerQuant</label><br>
-        <input type="text" name="PerQuant"><br><br>
+                    <!-- <label>PerQuant</label><br>
+                    <input class="set_input_size" type="text" name="PerQuant"><br><br>
 
-        <label>PalmOil</label><br>
-        <input type="text" name="PalmOil"><br><br>
+                    <label>PalmOil</label><br>
+                    <input class="set_input_size" type="text" name="PalmOil"><br><br>
 
-        <label>AddedSugar</label><br>
-        <input type="text" name="AddedSugar"><br><br>
-        
-        <label>FoodColor</label><br>
-        <input type="text" name="FoodColor"><br><br>
+                    <label>AddedSugar</label><br>
+                    <input class="set_input_size" type="text" name="AddedSugar"><br><br>
+                    
+                    <label>FoodColor</label><br>
+                    <input class="set_input_size" type="text" name="FoodColor"><br><br>
 
-        <label>Fat</label><br>
-        <input type="text" name="Fat"><br><br>
+                    <label>Fat</label><br>
+                    <input class="set_input_size" type="text" name="Fat"><br><br>
 
-        <label>Sodium</label><br>
-        <input type="text" name="Sodium"><br><br>
+                    <label>Sodium</label><br>
+                    <input class="set_input_size" type="text" name="Sodium"><br><br>
 
-        <label>Protein</label><br>
-        <input type="text" name="Protein"><br><br>
+                    <label>Protein</label><br>
+                    <input class="set_input_size" type="text" name="Protein"><br><br> -->
 
-        <input type="submit" value="Predict"><br><br>
-    </form>
+                    
+                    <button class="predict_button" >recommend</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <h1 class = 'image'></h1>
+            {% if res %}
+                <p>{{ res }}</p>
+            {% endif %}
+        </div>
+    </div>
 
 </body>
 </html>
