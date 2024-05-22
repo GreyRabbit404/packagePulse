@@ -1,4 +1,4 @@
-*{
+/* *{
     background-color: rgb(252, 247, 250);
 }
 .main_cont{
@@ -44,4 +44,13 @@ button:hover {
     margin-top:15vw;
 }
 
+ */
 
+ *{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  

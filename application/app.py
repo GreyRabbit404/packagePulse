@@ -3,16 +3,24 @@ import pickle
 import numpy as np
 import pandas as pd
 
-model = pickle.load(open('application/model.pkl','rb'))
+model = pickle.load(open('model.pkl','rb'))
 
-Rmodel = pickle.load(open('application/cosine_sim.pkl','rb'))
-filter = pd.read_csv('application/food.csv')
+Rmodel = pickle.load(open('cosine_sim.pkl','rb'))
+filter = pd.read_csv('food.csv')
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/recommendui')
+def indexr():
+    return render_template('recommend.html')
+
+@app.route('/predictui')
+def indexp():
+    return render_template('predict.html')
 
 # Define a route for receiving food_name and returning recommendations
 @app.route('/recommendations', methods=['POST'])
@@ -29,11 +37,12 @@ def get_recommendations( cosine_sim=Rmodel, df=filter):
     res = df['name'].iloc[food_indices].values.tolist()
 
     print(res)
-    return render_template('index.html',res = res)
+    return render_template('recommend.html',res = res)
 
 
 @app.route('/predict',methods = ['POST'])
 def predict_food():
+
     type = request.form.get('Type')
     palmoil = str(request.form.get('PalmOil'))
     addedsugar = float(request.form.get('AddedSugar'))
@@ -52,7 +61,7 @@ def predict_food():
     else:
         result =  "Not Good For Health"
 
-    return render_template('index.html',result = result)
+    return render_template('predict.html',result = result)
 
 
 if __name__ =='__main__':
