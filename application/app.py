@@ -3,10 +3,10 @@ import pickle
 import numpy as np
 import pandas as pd
 
-model = pickle.load(open('model.pkl','rb'))
+model = pickle.load(open('application\model.pkl','rb'))
 
-Rmodel = pickle.load(open('cosine_sim.pkl','rb'))
-filter = pd.read_csv('food.csv')
+Rmodel = pickle.load(open('application\cosine_sim.pkl','rb'))
+filter = pd.read_csv('application/food.csv')
 app = Flask(__name__)
 
 
